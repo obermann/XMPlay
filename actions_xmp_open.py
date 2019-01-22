@@ -76,6 +76,7 @@ the selected directory!"""
         message = 'Python expression - for example {eg.event.suffix} :'
 
     def __call__(self, filepath, mode):
+        if self.plugin.is_xmp_off(): return False
         fp = eg.ParseString(filepath[0])
         if path.isfile(fp) or path.isdir(fp):
             self.plugin.dde_get_conversation("System").execute("[%s(%s)]" % (("open", "list")[mode], fp))
