@@ -12,7 +12,7 @@ class Add(utils_xmp.TextSetter):
 
     def __call__(self, value="", from_eg_result=False):
         if from_eg_result:
-            value = str(eg.result)
+            value = unicode(eg.result)
         if self.plugin.is_xmp_off(): return False
         self.plugin.dde_get_conversation("System").execute("[list(%s)]" % value)
         return True
@@ -23,7 +23,7 @@ class Open(utils_xmp.TextSetter):
 
     def __call__(self, value="", from_eg_result=False):
         if from_eg_result:
-            value = str(eg.result)
+            value = unicode(eg.result)
         if self.plugin.is_xmp_off(): return False
         self.plugin.dde_get_conversation("System").execute("[open(%s)]" % value)
         return True
