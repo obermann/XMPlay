@@ -6,7 +6,7 @@ import eg
 eg.RegisterPlugin(
     name = "XMPlay",
     author = "obermann",
-    version = "1.0.1",
+    version = "1.0.2",
     kind = "program",
     guid = "{E7DB64B9-6C0D-4F38-A4CA-9FE2868AEA49}",
     description = (
